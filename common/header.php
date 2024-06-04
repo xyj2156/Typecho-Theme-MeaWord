@@ -1,32 +1,32 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-    <!doctype html>
-    <html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="renderer" content="webkit">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="format-detection" content="email=no">
-        <meta name="format-detection" content="address=no">
-        <meta name="format-detection" content="date=no">
-        <title><?php $this->archiveTitle([
-                'category' => _t('分类 %s 下的文章'),
-                'search'   => _t('包含关键字 %s 的文章'),
-                'tag'      => _t('标签 %s 下的文章'),
-                'author'   => _t('%s 发布的文章'),
-            ], '', ' - '); ?><?php $this->options->title(); ?></title>
-        <meta name='robots' content='max-image-preview:large' />
-        <link rel='stylesheet' id='bootstrap-css' href='<?php $this->options->themeUrl('assets/css/bootstrap.min.css'); ?>' type='text/css' media='all' />
-        <link rel='stylesheet' id='bifont-css' href='<?php $this->options->themeUrl('assets/css/bootstrap-icons.css'); ?>' type='text/css' media='all' />
-        <link rel='stylesheet' id='stylecss-css' href='<?php $this->options->themeUrl('assets/css/style.css?ver=2.0.1.2'); ?>' type='text/css' media='all' />
-        <link rel='stylesheet' id='stylecss-css' href='<?php $this->options->themeUrl('assets/css/comments.css?ver=2.0.1.2'); ?>' type='text/css' media='all' />
-        <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>" id="jquery-min-js"></script>
-        <?php echo $this->options->statistics ?: ''; ?>
-        <?php $this->header(); ?>
-        <?php $bannerIdsArr = explode(',', empty($this->options->bannerIds) ? '' : $this->options->bannerIds); ?>
-    </head>
+<?php defined('__TYPECHO_ROOT_DIR__') or exit; ?>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="date=no">
+    <title><?php $this->archiveTitle([
+            'category' => _t('分类 %s 下的文章'),
+            'search'   => _t('包含关键字 %s 的文章'),
+            'tag'      => _t('标签 %s 下的文章'),
+            'author'   => _t('%s 发布的文章'),
+        ], '', ' - '); ?><?php $this->options->title(); ?></title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='stylesheet' id='bootstrap-css' href='<?php $this->options->themeUrl('assets/css/bootstrap.min.css'); ?>' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-icon-css' href='<?php $this->options->themeUrl('assets/css/bootstrap-icons.css'); ?>' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='<?php $this->options->themeUrl('assets/css/style.css?ver=2.0.1.2'); ?>' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='<?php $this->options->themeUrl('assets/css/comments.css?ver=2.0.1.2'); ?>' type='text/css' media='all' />
+    <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>" id="jquery-min-js"></script>
+    <?php echo $this->options->statistics ?: ''; ?>
+    <?php $this->header(); ?>
+    <?php $bannerIdsArr = explode(',', empty($this->options->bannerIds) ? '' : $this->options->bannerIds); ?>
+</head>
 <body class="home blog">
     <style>:root {--bs-main: <?php echo $this->options->mainColor?:'#b95d40'?>;--bs-backguound: <?php echo $this->options->backgroundColor?:'#e6dece'?>}</style>
     <header class="headbox">
